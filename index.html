@@ -68,7 +68,7 @@
                    
                 </li>
                 <li class="ui-border-t">
-                   <audio src="1.mp3" loop="loop" controls="controls"></audio>
+                   <audio class="yyue" src="1.mp3" loop="loop" controls="controls"></audio>
                 </li>
             </ul>
         </div>
@@ -89,4 +89,15 @@
         });
         </script>
     </body>
+    function audioAutoPlay(id){
+var audio = document.getElementById(id);
+audio.play();
+document.addEventListener("WeixinJSBridgeReady", function () {
+audio.play();
+    }, false);
+document.addEventListener('YixinJSBridgeReady', function() {
+audio.play();
+    }, false);
+}
+audioAutoPlay('yyue');//解决微信播放音乐问题
 </html>
